@@ -77,6 +77,11 @@ def main():
     target = sys.argv
     print("Input argument is %s" % target)
     #传递网址
+    if(not os.path.exists("download")):
+        try:
+            os.mkdir("download")
+        except:
+            raise("创建目录失败！请手动创建download目录！")
     getImage(target[1])
 
 

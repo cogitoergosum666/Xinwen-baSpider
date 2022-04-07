@@ -11,9 +11,9 @@
 * BeautifulSoup库
 * Selenium库
 
-#### QuickStart
+#### QuickStart快速开始
 
-​	git clone或下载zip解压后在根目录运行：
+git clone或下载zip解压后在根目录运行：
 
 ```python
 python xinwenba.py [website url]
@@ -27,16 +27,20 @@ python xinwenba.py https://www.xinwenba.net/plus/view-748261-1.html
 
 其中url建议为每一个图集的第一个网页。
 
+若程序未能在根目录自动创建download请手动创建download文件夹。
+
 爬虫会在download文件下自动创建以图集为名字的文件夹收纳图片。
 
 #### 版本日志
 
-20220407 针对抓取完毕后无法退出网页的问题增加了raise判断以退出网页
+20220407 针对复用之后可能没有download文件夹的情况增加了创建路径与错误判断的代码
+
+20220407 针对抓取完毕后无法退出网页的问题增加了raise判断以退出网页的代码
 
 20220406 完善了备注
 
 #### 备注
 
-本爬虫为本人练手作品，目前仅设置了针对该网站webp文件的爬取。
+本爬虫为本人练手作品，目前仅设置了针对该网站webp文件的爬取（例如，“美女明星”栏目中的图片为href=x.jpg格式，不支持）。
 
 Enjoy 美女图片beauty~

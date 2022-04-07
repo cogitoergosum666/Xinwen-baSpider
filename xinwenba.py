@@ -42,7 +42,8 @@ def getImage(target):
         #找到<img 标签，寻找其中的src=项，使用正则匹配带有webp的项目
         links = html.find_all("img", src=re.compile('webp'))
         if len(links)==0:
-            raise print("一共抓取%d张图片，快来看看吧！" % index)
+            print("一共抓取%d张图片，快来看看吧！" % index)
+            return 
         # links = re.findall(img_regexp,html)
         time.sleep(2)#等加载
         for link in links:
@@ -61,6 +62,7 @@ def getImage(target):
                        #针对新闻吧的网页结果进行换页操作
         except:
             print("一共抓取%d张图片，快来看看吧！" % index)
+            return 
         # 模拟点击，注意要下拉！！！
         # 拖动视窗下拉操作
         # driver.execute_script("window.scrollTo(0,4000);")
@@ -84,5 +86,7 @@ def main():
             raise("创建目录失败！请手动创建download目录！")
     getImage(target[1])
 
+    
 
 main()
+driver.quit()

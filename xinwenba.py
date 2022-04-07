@@ -41,6 +41,8 @@ def getImage(target):
         # html = html.decode('utf-8')
         #找到<img 标签，寻找其中的src=项，使用正则匹配带有webp的项目
         links = html.find_all("img", src=re.compile('webp'))
+        if len(links)==0:
+            raise print("一共抓取%d张图片，快来看看吧！" % index)
         # links = re.findall(img_regexp,html)
         time.sleep(2)#等加载
         for link in links:
@@ -51,7 +53,7 @@ def getImage(target):
                 index += 1
                 print("正在爬取第%s张图片" % index)
 
-        time.sleep(1)
+        #time.sleep(1)
         index2 += 1
         try:
             driver.get(target[:target.find(".html")-1] +

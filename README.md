@@ -1,6 +1,6 @@
 # Xinwen-baSpider
 
-一个容易复用、小巧精悍的爬新闻吧美图的爬虫
+A tiny and easy-to-learn spider based on Python3
 
 ## 一个容易复用、小巧精悍的爬新闻吧美图的爬虫
 

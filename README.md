@@ -14,6 +14,26 @@
 
 ### QuickStart快速开始
 
+#### Menu使用
+
+git clone或下载zip解压后在根目录运行：
+
+```python
+python menu.py 
+```
+
+之后按提示输入想要爬的对应新闻吧url：
+
+```python
+[website url1] [website url2] ...
+```
+
+#### V2版本
+
+请将V1版本的xinwenba.py换成xinwenbaV2.py，其余相同。
+
+#### V1版本
+
 git clone或下载zip解压后在根目录运行：
 
 ```python
@@ -34,6 +54,10 @@ python xinwenba.py https://www.xinwenba.net/plus/view-748261-1.html
 
 ### 版本日志
 
+20220416 编写了menu.py，可以一次性编列多个网址作为爬虫目标，进一步解放双手
+
+20220415 再次学习了bs4后编写了xinwenbaV2，现在V2版本不使用chromedriver，效率提升了接近一倍，同时可以抓取非秀人网系列图片（采用src匹配替换了webp的正则匹配）
+
 20220407 增加了driver.quit()使得爬完后浏览器可以自动关闭
 
 20220407 针对复用之后可能没有download文件夹的情况增加了创建路径与错误判断的代码
@@ -44,6 +68,12 @@ python xinwenba.py https://www.xinwenba.net/plus/view-748261-1.html
 
 ### 备注
 
-本爬虫为本人练手作品，目前仅设置了针对该网站webp文件的爬取（例如，“美女明星”栏目中的图片为href=x.jpg格式，不支持）。
+#### 20220416更新
+
+根据测试，使用menu和v2可以爬到新闻吧所有栏目的图片，enjoy~
+
+#### 20220416前
+
+本爬虫为本人练手作品，xinwenba.py目前仅设置了针对该网站webp文件的爬取（例如，“美女明星”栏目中的图片为href=x.jpg格式，不支持）。
 
 Enjoy 美女图片beauty~

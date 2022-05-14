@@ -75,4 +75,3 @@ python xinwenba.py https://www.xinwenba.net/plus/view-748261-1.html
 
 本爬虫为本人练手作品，xinwenba.py目前仅设置了针对该网站webp文件的爬取（例如，“美女明星”栏目中的图片为href=x.jpg格式，不支持）。
 
-Enjoy 美女图片beauty~
